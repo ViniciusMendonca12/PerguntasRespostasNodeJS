@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Guia Perguntas</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- express ja busca a pasta public -->
+</head>
+<body>
+    <h1>Guia perguntas</h1>
+
+
+   <h1>Nome: <%= nome %> </h1>     <!-- essa tag é usada para carregar as variaveis, n é possivel comentar essa tag  -->
+
+    <br>
+    <%= lang%>
+    <br>
+    <%= empresa%>
+
+    <% if(msg){%>
+
+        <h3>Isso é uma mensagem de erro!</h3>
+
+    <% }else{%>
+
+        <h3>Nenhum erro!</h3>
+
+   <% } %> <!-- só usa igual quando quer pegar valor de variavel -->
+
+   <% produtos.forEach(function(produto) { %>
+        <hr>
+        <%= produto.nome %> <br>
+        <%= produto.preco %>
+   <% }) %>
+
+   <img src="/img/foguete.png" alt="">
+
+</body>
+</html>
